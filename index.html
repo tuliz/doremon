@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Page</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid black;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+var canvas=document.getElementById("myCanvas");
+var ctx=canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(250,150,80,0,2*Math.PI); //outer head
+ctx.fillStyle="skyblue";
+ctx.fill();
+ctx.beginPath();
+ctx.arc(250,165,60,0*Math.PI,2*Math.PI); //inside head
+ctx.fillStyle="white";
+ctx.fill();
+ctx.beginPath();
+ctx.arc(250,155,10,0,2*Math.PI); //nose
+ctx.fillStyle="red";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath(); //line under nose
+ctx.moveTo(250,165);
+ctx.lineTo(250,200);
+ctx.stroke();
+ctx.beginPath(); //right upper whisker
+ctx.moveTo(275,140);
+ctx.lineTo(300,130);
+ctx.stroke();
+ctx.beginPath(); //right middle whisker
+ctx.moveTo(275,150);
+ctx.lineTo(305,145);
+ctx.stroke();
+ctx.beginPath(); //right bottom whisker
+ctx.moveTo(275,160);
+ctx.lineTo(305,162);
+ctx.stroke();
+ctx.beginPath(); //left upper whisker
+ctx.moveTo(230,140);
+ctx.lineTo(200,130);
+ctx.stroke();
+ctx.beginPath(); //left middle whisker
+ctx.moveTo(230,150);
+ctx.lineTo(200,145);
+ctx.stroke();
+ctx.beginPath(); //left bottom whisker
+ctx.moveTo(230,160);
+ctx.lineTo(200,162);
+ctx.stroke();
+ctx.beginPath(); //mouth smile
+ctx.arc(250,160,40,0*Math.PI,1*Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(230,105,20,0,2*Math.PI);//left eye
+ctx.fillStyle="white";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(270,105,20,0,2*Math.PI); //right eye
+ctx.fillStyle="white";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(238,115,5,0,2*Math.PI); 
+//left inside eye
+ctx.fillStyle="black";
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(263,115,5,0,2*Math.PI);
+//right inside eye
+ctx.fillStyle="black";
+ctx.fill();
+ctx.stroke();
+</script>
+</body>
+</html>
